@@ -1,2 +1,5 @@
 # dnzengou.github.io
-GitHub Pages — Caffetteria Mazzetti cookbook and other sites
+
+Live cookbook: https://dnzengou.github.io/ricette-mazzetti/
+
+Source: https://github.com/dnzengou/ricette-mazzetti
