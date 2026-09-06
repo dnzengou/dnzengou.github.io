@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=./ricette-mazzetti/">
-<title>Ricette — Caffetteria Mazzetti</title>
-<link rel="canonical" href="./ricette-mazzetti/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookbooks — Mazzetti &amp; The World Oven</title>
+<meta name="description" content="Two interactive cookbooks: Caffetteria Mazzetti and The World Oven.">
+<style>
+  :root { --ink:#2c2118; --paper:#f3ead9; --crust:#8b3e22; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; font-family: Georgia, serif; background:#2c2118; color:var(--paper);
+    display:flex; align-items:center; justify-content:center; padding:32px 16px; }
+  main { width:min(640px,100%); }
+  h1 { font-weight:400; letter-spacing:.08em; margin:0 0 8px; }
+  p { color:#d7c7ab; }
+  .cards { display:grid; gap:16px; grid-template-columns:1fr 1fr; margin-top:28px; }
+  @media (max-width:560px){ .cards { grid-template-columns:1fr; } }
+  a.card { display:block; text-decoration:none; color:var(--ink); background:var(--paper);
+    padding:24px 20px; border-radius:14px; box-shadow:0 16px 40px rgba(0,0,0,.28); }
+  a.card strong { display:block; font-size:20px; margin-bottom:6px; }
+  a.card span { color:#6d5c4c; font-style:italic; }
+</style>
 </head>
 <body>
-<p><a href="./ricette-mazzetti/">Apri il ricettario — Caffetteria Mazzetti</a></p>
+<main>
+  <h1>Two cookbooks</h1>
+  <p>Interactive recipe books. Search, cook mode, notes, shopping list. Nothing to install.</p>
+  <div class="cards">
+    <a class="card" href="./ricette-mazzetti/">
+      <strong>Caffetteria Mazzetti</strong>
+      <span>Seasonal recipes from Asti. Italian, English, Swedish.</span>
+    </a>
+    <a class="card" href="./world-oven/">
+      <strong>The World Oven</strong>
+      <span>Simple, authentic, healthy breads and cakes from many kitchens.</span>
+    </a>
+  </div>
+</main>
 </body>
 </html>

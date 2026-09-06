@@ -1,5 +1,6 @@
-# dnzengou.github.io
+# Cookbooks
 
-Live cookbook: https://dnzengou.github.io/ricette-mazzetti/
+- Mazzetti: https://dnzengou.github.io/ricette-mazzetti/
+- The World Oven: https://dnzengou.github.io/world-oven/
 
-Source: https://github.com/dnzengou/ricette-mazzetti
+Source Mazzetti: https://github.com/dnzengou/ricette-mazzetti
