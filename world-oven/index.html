@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<base href="./">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The World Oven — simple healthy baking</title>
@@ -103,7 +104,8 @@ textarea{width:100%;min-height:90px;border:1px dashed var(--rule);background:#ff
     <div class="sub">A home baker’s atlas</div>
     <h1>The World Oven</h1>
     <p class="lede">Simple, authentic, healthy breads and cakes from many kitchens.</p>
-    <button class="chip on" id="openBtn">Open the oven</button>
+    <button type="button" class="chip on" id="openBtn">Open the oven</button>
+    <p class="lede" id="bootErr" hidden></p>
   </div>
 </section>
 <div class="app" id="app">
@@ -134,9 +136,26 @@ textarea{width:100%;min-height:90px;border:1px dashed var(--rule);background:#ff
 <aside class="drawer" id="drawer"></aside>
 <div class="cook" id="cook"></div>
 <div class="toast" id="toast"></div>
-<script src="i18n.js"></script>
-<script src="recipes-a.js"></script>
-<script src="recipes-b.js"></script>
-<script src="ui.js"></script>
+<script src="i18n.js?v=20260906b"></script>
+<script src="recipes-a.js?v=20260906b"></script>
+<script src="recipes-b.js?v=20260906b"></script>
+<script src="ui.js?v=20260906b"></script>
+<script>
+(function () {
+  function openOven() {
+    if (typeof enterBook === "function") { enterBook(); return; }
+    var cover = document.getElementById("cover");
+    var app = document.getElementById("app");
+    if (cover) cover.style.display = "none";
+    if (app) app.classList.add("on");
+  }
+  var btn = document.getElementById("openBtn");
+  if (btn) btn.addEventListener("click", function (e) { e.preventDefault(); location.hash = "#/book"; openOven(); });
+  var card = document.querySelector(".cover-card");
+  if (card) card.addEventListener("click", function () { location.hash = "#/book"; openOven(); });
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", openOven);
+  else openOven();
+})();
+</script>
 </body>
 </html>
